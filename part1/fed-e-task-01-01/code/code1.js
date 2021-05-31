@@ -12,4 +12,6 @@
     }, 10)
   }, 10)
 */
-
+new Promise((resolve, reject) => resolve('hello'))
+  .then( (res) => res + 'lagou' )
+  .then( (res) => { console.log(res + 'I ♥ U' ) })
