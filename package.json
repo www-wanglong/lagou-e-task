@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/www-wanglong/lagou-e-task#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "lodash": "^4.17.21"
   }
 }
