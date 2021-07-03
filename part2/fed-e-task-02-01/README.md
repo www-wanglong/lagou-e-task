@@ -22,8 +22,6 @@
 ## 编程题
 
 **1、概述脚手架实现的过程，并使用 NodeJS 完成一个自定义的小型脚手架工具**
-
-　
 generator-wl-vue [地址](https://www.npmjs.com/package/generator-wl-vue)
 
 
