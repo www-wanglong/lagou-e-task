@@ -29,6 +29,9 @@ const style = () => {
 
 const script = () => {
   return src('assets/scripts/*.js', { cwd: 'src', base: 'src' })
+  .pipe(plugins.eslint())
+  .pipe(plugins.eslint.format())
+  .pipe(plugins.eslint.failAfterError())
   .pipe(plugins.babel({ presets: [require('@babel/preset-env')] }))
   .pipe(dest('temp'))
   .pipe(bs.reload({ stream: true }))
@@ -121,4 +124,5 @@ module.exports = {
   build,
   develop,
   serve,
+  script,
 }

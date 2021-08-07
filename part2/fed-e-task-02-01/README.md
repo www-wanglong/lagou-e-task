@@ -31,7 +31,9 @@
 
 (html,css,等素材已经放到code/pages-boilerplate目录)
 
-　
+(**[**代码地址](https://github.com/www-wanglong/lagou-e-task/blob/master/part2/fed-e-task-02-01/code/pages-boilerplate/gulpfile.js)**)
+
+
 
 　
 
