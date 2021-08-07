@@ -21,12 +21,57 @@ Plugin，主要通过webpack内部的钩子机制，在webpack构建的不同阶
 Loader开发思路：
 - module.exports导出函数，该函数source参数为要处理的文件内容
 - 在函数体中编写需要处理的逻辑
+```JavaScript
+// 一个将marked转换html的loader
+const marked = require('marked')
+module.exports = source => {
+  const html = marked(source)
+  return html
+}
+```
 - 返回处理的结果（需要是字符串形式）
+- 使用
+```JavaScript
+{
+  test: /.md$/,
+  use: [
+    'html-loader',
+    './markdown-loader'
+  ],
+}
+```
 
 
 Plugin开发思路：（Plugin是通过webpack内部的钩子机制实现的）
 - 确定需要处理的时机，找到weboack提供的适当的钩子
 - 在插件函数内部apply方法实现
+```JavaScript
+// 去掉js注释的一个plugin
+class MyPlugin {
+  apply (compiler) {
+    console.log('MyPlugin 启动')
+    compiler.hooks.emit.tap('MyPlugin', compilation => {
+      for (const name in compilation.assets) {
+        if(name.endsWith('.js')) {
+          const contents = compilation.assets[name].source()
+          const withoutComments = contents.replace(/\/\*\*+\*\//g, '')
+          compilation.assets[name] = {
+            source: () => withoutComments,
+            size: () => withoutComments.length
+          }
+        }
+      }
+    })
+  }
+}
+```
+- 使用
+```JavaScript
+plugins: [
+  new MyPlugin()
+]
+```
+
 　
 
 　
