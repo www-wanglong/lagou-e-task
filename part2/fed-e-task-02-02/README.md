@@ -22,13 +22,17 @@ Loader开发思路：
 
 
 Plugin开发思路：（Plugin是通过webpack内部的钩子机制实现的）
-- 确定需要处理的时机，找到weboack提供的适当的钩子
+- 确定需要处理的时机，找到weboack提供的适当的钩子
 - 在插件函数内部apply方法实现
 　
 
 　
 
 # 二、编程题
+[代码](https://github.com/www-wanglong/lagou-e-task/tree/master/part2/fed-e-task-02-02/code/vue-app-base)
+
+
+[实现思路](https://github.com/www-wanglong/lagou-e-task/tree/master/part2/fed-e-task-02-02/code/vue-app-base#readme)
 
 #### 1、使用 Webpack 实现 Vue 项目打包任务
 
