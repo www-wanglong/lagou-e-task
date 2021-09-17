@@ -1,6 +1,10 @@
-// import index from './index_redux';
-// import index from './index_mobx';
-// import userMobx from './user-mobx';
-import userRedux from './user-redux';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import "./index.css"
 
-export default userRedux;
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
