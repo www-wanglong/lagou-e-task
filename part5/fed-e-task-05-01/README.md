@@ -63,10 +63,11 @@ Node异步I/O以及事件回调特点
 
 # 代码题
 ## 1. 统计指定目录中文件总大小。要考虑目录中还有子目录的情况。可以同步编码,异步更好
-
+[代码](https://github.com/www-wanglong/lagou-e-task/blob/master/part5/fed-e-task-05-01/01.js)
 ## 2. 编写单向链表类并且实现队列的入列出列操作
 队列先进先出
-```JavScript
-```
+
+[代码](https://github.com/www-wanglong/lagou-e-task/blob/master/part5/fed-e-task-05-01/02.js)
 
 ## 3. 基于Node写出一静态服务器。接收请求并且响应特定目录
+[代码](https://github.com/www-wanglong/lagou-e-task/tree/master/part5/fed-e-task-05-01/wl-server)
